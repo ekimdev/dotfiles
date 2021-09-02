@@ -1,0 +1,73 @@
+env:
+  #WINIT_X11_SCALE_FACTOR: "1.25"
+  TERM: xterm-256color
+
+window:
+  padding:
+    x: 10
+    y: 2
+  # Window title
+  title: Alacritty
+
+# Font configuration
+font:
+  normal:
+    family: Hurmit Nerd Font 
+    style: Regular
+  bold:
+    family: Hurmit Nerd Font
+  # Point size
+  size: 10
+
+colors:
+  # Default colors
+  primary:
+    background: '0x1e2127'
+    foreground: '0xabb2bf'
+
+  cursor:
+    text: '0x44475a'
+    cursor: '0xf8f8f2'
+
+  selection:
+    text: '0xf8f8f2'
+    background: '0x44475a'
+
+  # Normal colors
+  normal:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
+
+  # Bright colors
+  bright:
+    black:   '0x5c6370'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0xe6efff'
+
+  dim:
+    black:   '0x1e2127'
+    red:     '0xe06c75'
+    green:   '0x98c379'
+    yellow:  '0xd19a66'
+    blue:    '0x61afef'
+    magenta: '0xc678dd'
+    cyan:    '0x56b6c2'
+    white:   '0x828791'
+
+  indexed_colors: []
+
+key_bindings:
+  - { key: Key0,     mods: Control,                 action: ResetFontSize    }
+  - { key: Plus,      mods: Control,                 action: IncreaseFontSize }
+  - { key: Minus,    mods: Control,                 action: DecreaseFontSize }
