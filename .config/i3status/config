@@ -1,0 +1,75 @@
+general {
+    colors = false
+    interval = 5
+    color_good = "#50FA7B"
+    color_degraded = "#FFB86C"
+    color_bad = "#FF5555"
+    markup = "pango"
+}
+
+
+order += "disk /"
+order += "wireless wlan0"
+order += "battery 0"
+order += "cpu_temperature 0"
+order += "memory"
+order += "volume master"
+order += "tztime local"
+order += "tztime calendario"
+
+
+wireless wlan0 {
+	format_up = "<span color='#50fa7b'> %essid%quality</span> <span color='#7375a1'> </span>%bitrate"
+	format_down = "<span color='#9e1449'> ﰸ</span>"
+}
+
+
+battery 0 {
+	format = "%status%percentage %remaining"
+	format_down = "No battery"
+	status_chr = "<span color='#fff685'></span>"
+	status_bat = "<span color='#50fa7b'></span>"
+	status_unk = "<span color='#9e1449'></span>"
+	status_full = "<span color='#439023'></span> "
+	path = "/sys/class/power_supply/BAT%d/uevent"
+	threshold_type = percentage
+	low_threshold = 15
+	last_full_capacity = true
+}
+
+
+tztime local {
+	format = "<span color='#7e8cb3'> </span>%time"
+	format_time = "%R"
+}
+
+
+tztime calendario {
+	format = "<span color='#7e8cb3'> </span>%time"
+	format_time = "%Y/%d/%m"
+}
+
+
+disk "/" {
+	format = "<span color='#ffb86c'>﫭</span> %avail"
+}
+
+
+volume master {
+	format = "<span color='#00ffff'>墳</span> %volume"
+	format_muted = "<span color='#9e1449'>ﱝ %volume</span>"
+	device = "default"
+	mixer = "Master"
+	mixer_idx = 0
+}
+
+
+cpu_temperature 0 {
+	format = "<span color='#3371b8'></span>%degrees°C"
+}
+
+
+memory {
+	format = "<span color='#fa1b1b'></span> %used/%total"
+	format_degraded = "Memory LOW: %free"
+}
