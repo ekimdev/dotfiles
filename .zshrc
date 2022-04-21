@@ -4,7 +4,8 @@ PATH=~/.local/bin:$PATH
 
 # Alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME' # dotfiles management
-
+alias internet='sudo systemctl restart iwd dhcpcd'
+alias ls='ls -al --color=auto'
 
 # Installed by AUR
 export SPACESHIP_ROOT=/usr/lib/spaceship-prompt

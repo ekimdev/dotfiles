@@ -25,12 +25,16 @@ wireless wlan0 {
 
 
 battery 0 {
-	format = "%status%percentage %remaining"
+	format = "%status %percentage %remaining"
 	format_down = "No battery"
-	status_chr = "<span color='#fff685'></span>"
-	status_bat = "<span color='#50fa7b'></span>"
-	status_unk = "<span color='#9e1449'></span>"
-	status_full = "<span color='#439023'></span> "
+	status_chr = ""
+	status_bat = ""
+	status_unk = ""
+	status_full = ""
+	# status_chr = "<span color='#fff685'></span>"
+	# status_bat = "<span color='#50fa7b'></span>"
+	# status_unk = "<span color='#9e1449'></span>"
+	# status_full = "<span color='#439023'></span> "
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	threshold_type = percentage
 	low_threshold = 15
@@ -39,14 +43,13 @@ battery 0 {
 
 
 tztime local {
-	format = "<span color='#7e8cb3'> </span>%time"
-	format_time = "%R"
+	format = "<span color='#7e8cb3'> </span>%R"
+
 }
 
 
 tztime calendario {
-	format = "<span color='#7e8cb3'> </span>%time"
-	format_time = "%Y/%d/%m"
+	format = "<span color='#7e8cb3'> </span>%Y/%d/%m"
 }
 
 

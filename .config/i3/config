@@ -125,9 +125,9 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # Terminal app 
 assign [class="alacritty"] $ws1
 # Coding app 
-assign [class="code"] $ws2
+# assign [class="code"] $ws2
 # Web app
-assign [class="firefox"] $ws3
+# assign [class="firefox"] $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -207,5 +207,5 @@ exec --no-startup-id picom --config ~/.config/picom/picom.config --experimental-
 
 # Forcing apps when start i3
 exec_always --no-startup-id alacritty
-exec_always --no-startup-id code
-exec_always --no-startup-id firefox
+# exec_always --no-startup-id code
+# exec_always --no-startup-id firefox
